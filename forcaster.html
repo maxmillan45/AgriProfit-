@@ -7,6 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weather Dashboard</title>
+
 <nav class="bg-green-100 px-6 flex items-center justify-between h-16">
   <div class="flex items-center gap-3">
     <a href="index.html" class="flex items-center space-x-3">
@@ -30,46 +39,116 @@
     <span></span>
   </div>
 </nav>
-<body class=" grid font-sans">
-    <header class="bg-green-50  p-24 text-center text-green">
-        <h1 class="text-5xl font-bold mb-10 tracking-wide">Weather Dashboard</h1>
-        <p class="text-lg font-semibold w-[60%] mx-auto">Get real-time weather information for your location and search for weather conditions in cities around the world.</p>
-    </header>
 
-    <section class="bg-green-50  text-center p-8">
-        <h2 class=" bg-green 300 text-4xl font-bold mb-8">Current Weather</h2>
 
-        <div id="currentWeatherCard" class="bg-green-300 p-8 w-[40%] rounded-xl shadow-lg mx-auto gap-4">
-            <div id="cardHeader" class="gap-4 text-xl text-start font-bold tracking-wide"></div>
+<!-- Tailwind CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="font-sans bg-green-50">
+
+<!-- HEADER -->
+<header class="p-16 text-center">
+    <h1 class="text-5xl font-bold mb-6 tracking-wide text-green-800">
+        Weather Dashboard
+    </h1>
+
+    <p class="text-lg font-semibold w-[70%] mx-auto text-gray-700">
+        Get real-time weather information for your location and search for weather
+        conditions in cities around the world.
+    </p>
+</header>
+
+
+<!-- MAIN SECTION -->
+<section class="px-8 py-16">
+
+    <h2 class="text-4xl font-bold text-center mb-12 text-green-800">
+        Weather Information
+    </h2>
+
+    <!-- FLEX CONTAINER (horizontal layout) -->
+    <div class="flex flex-col md:flex-row justify-center gap-10 items-start">
+
+        <!-- CURRENT WEATHER CARD -->
+        <div id="currentWeatherCard" class="bg-green-300 p-8 w-full md:w-[420px] rounded-xl shadow-lg">
+
+            <h3 class="text-2xl font-bold mb-4 text-green-900">
+                Current Weather
+            </h3>
+
+            <div id="cardHeader" class="text-xl font-bold tracking-wide mb-4"></div>
+
             <div id="tempSection" class="flex gap-4 justify-center items-center m-4"></div>
-            <div id="cardFooter" class="flex justify-between gap-6 p-4 rounded-b-xl"></div>
-        </div>
-    </section>
 
-    <section class=" bg-green-50 text-center px-8 py-16">
-        <h2 class="text-3xl font-bold pb-8">Search Weather by City.</h2>
-        <form class=" bg-green-300 border border-gray-300 rounded-md p-4 w-[40%] mx-auto">
-            <h3 class="text-lg font-bold text-start my-6">Find Weather Information</h3>
+            <div id="cardFooter" class="flex justify-between gap-6 p-4 rounded-b-xl"></div>
+
+        </div>
+
+
+        <!-- SEARCH FORM -->
+        <form class="bg-green-300 border border-gray-300 rounded-xl p-8 w-full md:w-[420px] shadow-lg">
+
+            <h3 class="text-xl font-bold text-start mb-6">
+                Search Weather by City
+            </h3>
 
             <div class="flex flex-col text-start">
-                <label for="cityInput" class="font-semibold ml-4 mb-2">City Name</label>
-                <div>
-                    <input type="text" id="cityInput" name="cityInput" placeholder="e.g. Nairobi" class="border border-gray-300 rounded-md p-2 mx-4 w-3/4">
-                    <br><br> </div>
 
-                    <button type="submit" class="bg-green-800 hover:bg-green-600 text-white px-6 py-2 rounded-md">Search</button>
-               
+                <label for="cityInput" class="font-semibold mb-2">
+                    City Name
+                </label>
+
+                <input
+                    type="text"
+                    id="cityInput"
+                    name="cityInput"
+                    placeholder="e.g. Nairobi"
+                    class="border border-gray-300 rounded-md p-3 mb-6 w-full"
+                >
+
+                <button
+                    type="submit"
+                    class="bg-green-800 hover:bg-green-600 text-white px-6 py-3 rounded-md transition duration-300"
+                >
+                    Search
+                </button>
+
             </div>
-            
+
         </form>
 
-        <div id="weatherCard" class="bg-white p-8 w-[40%] rounded-xl shadow-lg mx-auto gap-4">
-            <div id="weatherCardHeader" class="gap-4 text-xl text-start font-bold tracking-wide"></div>
+    </div>
+
+
+    <!-- SEARCHED CITY WEATHER RESULT -->
+    <div class="mt-16 flex justify-center">
+
+        <div id="weatherCard" class="bg-white p-8 w-full md:w-[500px] rounded-xl shadow-lg">
+
+            <div id="weatherCardHeader" class="text-xl text-start font-bold tracking-wide mb-4"></div>
+
             <div id="weatherTempSection" class="flex gap-4 justify-center items-center m-4"></div>
+
             <div id="weatherCardFooter" class="flex justify-between gap-6 p-4 rounded-b-xl"></div>
+
         </div>
-    </section>
-     <footer class="bg-green-100 p-4">
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-green-100 p-6 text-center text-gray-700">
+    <p>© 2026 Weather Dashboard | Built with HTML, Tailwind CSS & JavaScript</p>
+</footer>
+
+
+</body>
+</html>
+  <footer class="bg-green-100 p-4">
   
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
@@ -136,6 +215,14 @@
 
 
     <script src="js/news.js"></script>
+    <script>
+        const getElement = (id) => document.getElementById("learnMoreButton");
+        EventListener("click", getElement, () => {
+            // redirect to more info
+            window.location.href = "forcaster.html";    
+            
+        })
+    </script>
 
 </body>
 </html>

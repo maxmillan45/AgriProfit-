@@ -1,14 +1,3 @@
-// const getElement = (id) => document.getElementById("learnMoreButton");
-// EventListener("click", getElement, () => {
-//     // redirect to more info
-//     window.location.href = "forcaster.html";    
-    
-// })
-
-
-
-
-
 const APIkey = '5ba0a33daa717fc484cf26dc71a137b4';
 
 
@@ -105,6 +94,18 @@ async function getWeatherByCity(city){
         console.error(error)
     }
 }
+
+btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    const city = cityInput.value.trim(); 
+    if (city) {
+        getWeatherByCity(city);
+    } else {
+        alert('Please enter a city name');
+    }
+});
+
+
 
 
 

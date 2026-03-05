@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather APP</title>
+    <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
+<body>
 <nav class="bg-green-100 px-6 flex items-center justify-between h-16">
   <div class="flex items-center gap-3">
     <a href="index.html" class="flex items-center space-x-3">
@@ -30,46 +30,63 @@
     <span></span>
   </div>
 </nav>
-<body class=" grid font-sans">
-    <header class="bg-green-50  p-24 text-center text-green">
-        <h1 class="text-5xl font-bold mb-10 tracking-wide">Weather Dashboard</h1>
-        <p class="text-lg font-semibold w-[60%] mx-auto">Get real-time weather information for your location and search for weather conditions in cities around the world.</p>
-    </header>
 
-    <section class="bg-green-50  text-center p-8">
-        <h2 class=" bg-green 300 text-4xl font-bold mb-8">Current Weather</h2>
+    <!-- About Section for Farm Input Cost Optimizer -->
+<section id="about" class="bg-green-50 py-16">
+  <div class="container mx-auto px-6 md:px-12">
+    <!-- Section Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-green-900 mb-4">About Farm Input Cost Optimizer</h2>
+      <p class="text-green-800 text-lg max-w-2xl mx-auto">
+        The Farm Input Cost Optimizer is a smart web application designed to help farmers plan, calculate, and manage their farm input costs efficiently. It simplifies decision-making and ensures better resource allocation for sustainable farming.
+      </p>
+    </div>
 
-        <div id="currentWeatherCard" class="bg-green-300 p-8 w-[40%] rounded-xl shadow-lg mx-auto gap-4">
-            <div id="cardHeader" class="gap-4 text-xl text-start font-bold tracking-wide"></div>
-            <div id="tempSection" class="flex gap-4 justify-center items-center m-4"></div>
-            <div id="cardFooter" class="flex justify-between gap-6 p-4 rounded-b-xl"></div>
+    <!-- Features Cards -->
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Card 1 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="assets/people-team-tablet-farm-trade-agriculture-production-online-inspection-checklist-collaboration-professional-gardening-website-crop-management-quality-control-report_590464-514825.jpeg" alt="Cost Calculation" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-900">Cost Calculation</h3>
+          <p class="text-green-800">
+            Quickly calculate total input costs for seeds, fertilizers, pesticides, and labor, helping farmers stay within budget.
+          </p>
         </div>
-    </section>
+      </div>
 
-    <section class=" bg-green-50 text-center px-8 py-16">
-        <h2 class="text-3xl font-bold pb-8">Search Weather by City.</h2>
-        <form class=" bg-green-300 border border-gray-300 rounded-md p-4 w-[40%] mx-auto">
-            <h3 class="text-lg font-bold text-start my-6">Find Weather Information</h3>
-
-            <div class="flex flex-col text-start">
-                <label for="cityInput" class="font-semibold ml-4 mb-2">City Name</label>
-                <div>
-                    <input type="text" id="cityInput" name="cityInput" placeholder="e.g. Nairobi" class="border border-gray-300 rounded-md p-2 mx-4 w-3/4">
-                    <br><br> </div>
-
-                    <button type="submit" class="bg-green-800 hover:bg-green-600 text-white px-6 py-2 rounded-md">Search</button>
-               
-            </div>
-            
-        </form>
-
-        <div id="weatherCard" class="bg-white p-8 w-[40%] rounded-xl shadow-lg mx-auto gap-4">
-            <div id="weatherCardHeader" class="gap-4 text-xl text-start font-bold tracking-wide"></div>
-            <div id="weatherTempSection" class="flex gap-4 justify-center items-center m-4"></div>
-            <div id="weatherCardFooter" class="flex justify-between gap-6 p-4 rounded-b-xl"></div>
+      <!-- Card 2 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="assets/greenhouse-2096497_1920-1024x683.jpeg" alt="Resource Planning" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-900">Resource Planning</h3>
+          <p class="text-green-800">
+            Organize farm inputs efficiently, estimate required quantities, and reduce waste for maximum productivity.
+          </p>
         </div>
-    </section>
-     <footer class="bg-green-100 p-4">
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition duration-300">
+        <img src="assets/irrigation.jpg" alt="Sustainable Farming" class="w-full h-48 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-semibold mb-2 text-green-900">Sustainable Farming</h3>
+          <p class="text-green-800">
+            Make data-driven decisions to optimize costs and resources, supporting sustainable and profitable farming practices.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-12">
+      <a href="features.html" class="inline-block bg-green-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300">
+        Start Optimizing Now
+      </a>
+    </div>
+  </div>
+</section>
+  <footer class="bg-green-100 p-4">
   
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
@@ -133,9 +150,6 @@
 
 </footer>
 
-
-
-    <script src="js/news.js"></script>
-
+    
 </body>
 </html>

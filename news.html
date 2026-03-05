@@ -64,13 +64,11 @@
             Check the weather forecast before your next planting season.
           </h3>
           
+<button 
+onclick="window.location.href='forcaster.html'" 
+class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition duration-300 mt-2">
+Learn More
 </button>
-
-
-          <a href="forcaster.html">
-            <button id="learnMoreButton" class="bg-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-green-600 transition duration-300 mt-2">
-            Learn More
-          </button></a>
 
           <p class="text-sm mt-2 text-green-100">
             Farmers advised to re-check break-even prices before selling.
@@ -207,16 +205,7 @@
 </footer>
 
 <script src="js/news.js"></script>
-<script src="js/updates.js"></script>
-<script>
-  const getElement = (id) => document.getElementById("learnMoreButton");
-EventListener("click", getElement, () => {
-    // redirect to more info
-    window.location.href = "forcaster.html";    
-    
-})
 
-</script>
 
 </body>
 </html>

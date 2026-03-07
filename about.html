@@ -8,29 +8,42 @@
 </head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <body>
-<nav class="bg-green-100 px-6 flex items-center justify-between h-16">
-  <div class="flex items-center gap-3">
-    <a href="index.html" class="flex items-center space-x-3">
-      <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
-      <span class="text-3xl font-bold text-green-700">AgriProfit</span>
-    </a>
-  </div>
+<nav class="bg-green-100 px-6 flex items-center justify-between h-16 relative">
 
-  <ul class="flex items-center space-x-6 text-black">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="tools.html">Features</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="expert.html">Ask</a></li>
+  <!-- Logo -->
+  <a href="index.html" class="flex items-center space-x-3">
+    <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
+    <span class="text-2xl md:text-3xl font-bold text-green-700">AgriProfit</span>
+  </a>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+    <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+    <li><a href="news.html" class="hover:text-green-700">News</a></li>
+    <li><a href="tools.html" class="hover:text-green-700">Features</a></li>
+    <li><a href="about.html" class="hover:text-green-700">About</a></li>
+    <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
+    <li><a href="expert.html" class="hover:text-green-700">Ask</a></li>
   </ul>
 
-  <div class="hamburger md:hidden" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <!-- Hamburger Button -->
+  <button id="menuBtn" class="md:hidden text-green-700 text-3xl">
+    ☰
+  </button>
+
 </nav>
+
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-green-100 px-6 py-4 space-y-3 text-black font-medium">
+
+  <a href="index.html" class="block hover:text-green-700">Home</a>
+  <a href="news.html" class="block hover:text-green-700">News</a>
+  <a href="tools.html" class="block hover:text-green-700">Features</a>
+  <a href="about.html" class="block hover:text-green-700">About</a>
+  <a href="contact.html" class="block hover:text-green-700">Contact</a>
+  <a href="expert.html" class="block hover:text-green-700">Ask</a>
+
+</div>
 
     <!-- About Section for Farm Input Cost Optimizer -->
 <section id="about" class="bg-green-50 py-16">
@@ -150,6 +163,15 @@
   </div>
 
 </footer>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+</script>
 
     
 </body>

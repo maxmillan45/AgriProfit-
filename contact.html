@@ -1,39 +1,120 @@
-<nav class="bg-green-100 px-6 flex items-center justify-between h-16">
-  <div class="flex items-center gap-3">
-    <a href="index.html" class="flex items-center space-x-3">
-      <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
-      <span class="text-3xl font-bold text-green-700">AgriProfit</span>
-    </a>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <nav class="bg-green-100 px-6 flex items-center justify-between h-16 relative">
 
-  <ul class="flex items-center space-x-6 text-black">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="tools.html">Features</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="expert.html">Ask</a></li>
+
+  <a href="index.html" class="flex items-center space-x-3">
+    <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
+    <span class="text-2xl md:text-3xl font-bold text-green-700">AgriProfit</span>
+  </a>
+
+
+  <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+    <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+    <li><a href="news.html" class="hover:text-green-700">News</a></li>
+    <li><a href="tools.html" class="hover:text-green-700">Features</a></li>
+    <li><a href="about.html" class="hover:text-green-700">About</a></li>
+    <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
+    <li><a href="expert.html" class="hover:text-green-700">Ask</a></li>
   </ul>
 
-  <div class="hamburger md:hidden" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <button id="menuBtn" class="md:hidden text-green-700 text-3xl">
+    ☰
+  </button>
+
 </nav>
 
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="hidden md:hidden bg-green-100 px-6 py-4 space-y-3 text-black font-medium">
+
+  <a href="index.html" class="block hover:text-green-700">Home</a>
+  <a href="news.html" class="block hover:text-green-700">News</a>
+  <a href="tools.html" class="block hover:text-green-700">Features</a>
+  <a href="about.html" class="block hover:text-green-700">About</a>
+  <a href="contact.html" class="block hover:text-green-700">Contact</a>
+  <a href="expert.html" class="block hover:text-green-700">Ask</a>
+
+</div>
+<section class="bg-green-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+    <!-- Contact Info -->
+    <div>
+      <h2 class="text-3xl font-bold text-green-800 mb-4">Contact Our Experts</h2>
+      <p class="text-gray-600 mb-6">
+        Have questions about farm inputs, fertilizers, or cost optimization? 
+        Send us a message and our agricultural experts will respond.
+      </p>
+
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="text-green-700 text-xl"> <img src="https://www.freeiconspng.com/uploads/green-location-icons-17.png" alt="location" class="h-10 w-10"></span>
+          <p>Nairobi, Kenya</p>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <span class="text-green-700 text-xl"><img src="https://thumbs.dreamstime.com/b/phone-ringing-icon-glassy-green-round-button-isolated-abstract-illustration-97494958.jpg" alt="Phone" class="h-10 w-10"></span>
+          <p>+254 700 123 456</p>
+        </div>
+
+       
+      </div>
+    </div>
 
 
 
+    <div class="bg-white p-8 rounded-xl shadow-lg">
+      <form id="contactForm" class="space-y-5">
 
+        <div>
+          <label class="block text-sm font-semibold mb-1">Full Name</label>
+          <input type="text" id="name"
+          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
+          placeholder="Enter your name">
+        </div>
 
+        <div>
+          <label class="block text-sm font-semibold mb-1">Email</label>
+          <input type="email" id="email"
+          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
+          placeholder="Enter your email">
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold mb-1">Message</label>
+          <textarea id="message"
+          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
+          rows="4"
+          placeholder="Write your message"></textarea>
+        </div>
+
+        <button
+        type="submit"
+        class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
+        Send Message
+        </button>
+
+        <p id="formMessage" class="text-center font-semibold hidden"></p>
+
+      </form>
+    </div>
+
+  </div>
+</section>
 
 
   <footer class="bg-green-100 p-4">
   
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
-    <!-- Brand -->
+
     <div>
       <h2 class="text-3xl font-bold  text-green-700 ">
         Farm Optimizer
@@ -45,7 +126,6 @@
       </p>
     </div>
 
-    <!-- Quick Links -->
     <div>
       <h3 class="text-green-700 font-semibold mb-4">Quick Links</h3>
       <ul class="space-y-2 text-sm">
@@ -57,7 +137,7 @@
       </ul>
     </div>
 
-    <!-- Resources -->
+
     <div>
       <h3 class="text-green-700 font-semibold mb-4">Resources</h3>
       <ul class="space-y-2 text-sm">
@@ -92,3 +172,7 @@
   </div>
 
 </footer>
+<script src="js/contact.js"></script>
+    
+</body>
+</html>

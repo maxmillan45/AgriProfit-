@@ -7,28 +7,28 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-     <nav class="bg-green-100 px-6 flex items-center justify-between h-16">
-  <div class="flex items-center gap-3">
-    <a href="index.html" class="flex items-center space-x-3">
-      <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
-      <span class="text-3xl font-bold text-green-700">AgriProfit</span>
-    </a>
-  </div>
+     <nav class="bg-green-100 px-6 flex items-center justify-between h-16 relative">
 
-  <ul class="flex items-center space-x-6 text-black">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="tools.html">Features</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    <li><a href="expert.html">Ask</a></li>
+
+  <a href="index.html" class="flex items-center space-x-3">
+    <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
+    <span class="text-2xl md:text-3xl font-bold text-green-700">AgriProfit</span>
+  </a>
+
+
+  <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
+    <li><a href="index.html" class="hover:text-green-700">Home</a></li>
+    <li><a href="news.html" class="hover:text-green-700">News</a></li>
+    <li><a href="tools.html" class="hover:text-green-700">Features</a></li>
+    <li><a href="about.html" class="hover:text-green-700">About</a></li>
+    <li><a href="contact.html" class="hover:text-green-700">Contact</a></li>
+    <li><a href="expert.html" class="hover:text-green-700">Ask</a></li>
   </ul>
 
-  <div class="hamburger md:hidden" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+  <button id="menuBtn" class="md:hidden text-green-700 text-3xl">
+    ☰
+  </button>
+
 </nav>
     
 <section class="bg-gradient-to-b from-green-50 to-white py-20">

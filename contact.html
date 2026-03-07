@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-     <nav class="bg-green-100 px-6 flex items-center justify-between h-16">
+<nav class="bg-green-100 px-6 flex items-center justify-between h-16">
   <div class="flex items-center gap-3">
     <a href="index.html" class="flex items-center space-x-3">
       <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
@@ -30,116 +21,14 @@
     <span></span>
   </div>
 </nav>
-    
-<section class="bg-gradient-to-b from-green-50 to-white py-20">
 
-<div class="max-w-7xl mx-auto px-6 text-center">
 
-<h2 class="text-4xl font-bold text-green-800 mb-4">
-Ask the Experts
-</h2>
 
-<p class="text-gray-600 mb-14">
-Get advice from agricultural experts to help optimize your farm inputs.
-</p>
 
-<div class="grid md:grid-cols-3 gap-10">
 
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
 
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwg1P0wNJO_NceC2QmkXOK-ZEciZ-o_ZueJg&s"
-class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
 
-<h3 class="text-xl font-semibold text-green-700">
-Dr. James Mwangi
-</h3>
 
-<p class="text-gray-500 text-sm mb-4">
-Soil Specialist
-</p>
-
-<button onclick="openForm('Dr. James Mwangi')"
-class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
-Ask Question
-</button>
-
-</div>
-
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkpgLhP4Hi-r3hTVT2kug7dwnITC2nK3GzQ&s"
-class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
-
-<h3 class="text-xl font-semibold text-green-700">
-Grace Wanjiku
-</h3>
-
-<p class="text-gray-500 text-sm mb-4">
-Crop Advisor
-</p>
-
-<button onclick="openForm('Grace Wanjiku')"
-class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
-Ask Question
-</button>
-
-</div>
-
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
-
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-3kD6aBb2FRzQGtcTn6dQt3nwEEv17bRVg&s"
-class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
-
-<h3 class="text-xl font-semibold text-green-700">
-Peter Otieno
-</h3>
-
-<p class="text-gray-500 text-sm mb-4">
-Farm Economist
-</p>
-
-<button onclick="openForm('Peter Otieno')"
-class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
-Ask Question
-</button>
-
-</div>
-
-</div>
-</div>
-</section>
-<div id="questionForm"
-class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-
-<div class="bg-white p-6 rounded-xl w-96">
-
-<h3 class="text-xl font-bold text-green-700 mb-4">
-Ask <span id="expertName"></span>
-</h3>
-
-<textarea id="questionInput"
-class="w-full border p-2 rounded mb-4"
-placeholder="Type your question"></textarea>
-
-<div class="flex justify-between">
-
-<button onclick="sendQuestion()"
-class="bg-green-700 text-white px-4 py-2 rounded">
-Send
-</button>
-
-<button onclick="closeForm()"
-class="bg-gray-400 text-white px-4 py-2 rounded">
-Cancel
-</button>
-
-</div>
-</div>
-
-</div>
   <footer class="bg-green-100 p-4">
   
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
@@ -203,16 +92,3 @@ Cancel
   </div>
 
 </footer>
-    
-
-
-
-
-
-
-
-
-
-<script src="js/expert.js"></script>
-</body>
-</html>

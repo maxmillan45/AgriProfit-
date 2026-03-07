@@ -1,33 +1,34 @@
 let currentExpert = "";
 
-function openForm(expertName) {
+function openForm(name){
 
-  currentExpert = expertName;
+currentExpert = name;
 
-  document.getElementById("expertName").innerText = expertName;
+document.getElementById("expertName").innerText = name;
 
-  document.getElementById("questionForm").classList.remove("hidden");
+document.getElementById("questionForm").classList.remove("hidden");
+
 }
 
-function closeForm() {
+function closeForm(){
 
-  document.getElementById("questionForm").classList.add("hidden");
+document.getElementById("questionForm").classList.add("hidden");
 
 }
 
 function sendQuestion(){
 
-  const question = document.getElementById("questionInput").value;
+let question = document.getElementById("questionInput").value;
 
-  if(question === ""){
-    alert("Please enter a question");
-    return;
-  }
+if(question === ""){
+alert("Please enter your question");
+return;
+}
 
-  alert("Your question has been sent to " + currentExpert);
+alert("Your question has been sent to " + currentExpert);
 
-  document.getElementById("questionInput").value = "";
+document.getElementById("questionInput").value = "";
 
-  closeForm();
+closeForm();
 
 }

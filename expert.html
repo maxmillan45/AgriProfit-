@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+     <nav class="bg-green-100 px-6 flex items-center justify-between h-16">
+  <div class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center space-x-3">
+      <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
+      <span class="text-3xl font-bold text-green-700">AgriProfit</span>
+    </a>
+  </div>
+
+  <ul class="flex items-center space-x-6 text-black">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="news.html">News</a></li>
+    <li><a href="tools.html">Features</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="expert.html">Ask</a></li>
+  </ul>
+
+  <div class="hamburger md:hidden" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+    
+<section class="bg-green-50 py-16">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+
+    <h2 class="text-3xl font-bold text-green-800 mb-4">Ask the Experts</h2>
+    <p class="text-gray-600 mb-12">
+      Get advice from agricultural experts about farm inputs and crop management.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+  
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <img src="assets/10191129-amazingly-high-detailed-portrait-of-an-african-face.jpeg"
+        class="w-24 h-24 rounded-full mx-auto mb-4">
+
+        <h3 class="text-xl font-semibold text-green-700">Dr. James Mwangi</h3>
+        <p class="text-gray-500 text-sm">Soil Specialist</p>
+
+        <button onclick="openForm('Dr. James Mwangi')" 
+        class="mt-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-600">
+        Ask Question
+        </button>
+      </div>
+
+   
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <img src="assets/depositphotos_129306196-stock-photo-african-woman-face.webp"
+        class="w-24 h-24 rounded-full mx-auto mb-4">
+
+        <h3 class="text-xl font-semibold text-green-700">Grace Wanjiku</h3>
+        <p class="text-gray-500 text-sm">Crop Advisor</p>
+
+        <button onclick="openForm('Grace Wanjiku')" 
+        class="mt-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-600">
+        Ask Question
+        </button>
+      </div>
+
+  
+      <div class="bg-white shadow-lg rounded-xl p-6">
+        <img src="assets/images.jpeg"
+        class="w-24 h-24 rounded-full mx-auto mb-4">
+
+        <h3 class="text-xl font-semibold text-green-700">Peter Otieno</h3>
+        <p class="text-gray-500 text-sm">Farm Economist</p>
+
+        <button onclick="openForm('Peter Otieno')" 
+        class="mt-4 bg-green-700 text-white px-4 py-2 rounded-full hover:bg-green-600">
+        Ask Question
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<div id="questionForm" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+  <div class="bg-white p-6 rounded-xl w-96">
+
+    <h3 class="text-xl font-bold text-green-700 mb-4">
+      Ask <span id="expertName"></span>
+    </h3>
+
+    <textarea id="questionInput"
+    class="w-full border p-2 rounded mb-4"
+    placeholder="Type your question..."></textarea>
+
+    <div class="flex justify-between">
+
+      <button onclick="sendQuestion()"
+      class="bg-green-700 text-white px-4 py-2 rounded">
+      Send
+      </button>
+
+      <button onclick="closeForm()"
+      class="bg-gray-400 text-white px-4 py-2 rounded">
+      Cancel
+      </button>
+
+    </div>
+  </div>
+
+</div>
+    
+
+
+
+
+
+
+
+
+
+<script src="js/expert.js"></script>
+</body>
+</html>

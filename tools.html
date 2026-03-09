@@ -7,15 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <nav class="bg-green-100 px-6 flex items-center justify-between h-16 relative">
+    <nav class="bg-green-100 px-6 flex items-center justify-between h-16 relative">
 
-
+  <!-- Logo -->
   <a href="index.html" class="flex items-center space-x-3">
     <img src="assets/images.png" class="w-10 h-10 rounded-full object-cover">
     <span class="text-2xl md:text-3xl font-bold text-green-700">AgriProfit</span>
   </a>
 
-
+  <!-- Desktop Menu -->
   <ul class="hidden md:flex items-center space-x-6 text-black font-medium">
     <li><a href="index.html" class="hover:text-green-700">Home</a></li>
     <li><a href="news.html" class="hover:text-green-700">News</a></li>
@@ -25,6 +25,7 @@
     <li><a href="expert.html" class="hover:text-green-700">Ask</a></li>
   </ul>
 
+  <!-- Hamburger Button -->
   <button id="menuBtn" class="md:hidden text-green-700 text-3xl">
     ☰
   </button>
@@ -41,80 +42,110 @@
   <a href="contact.html" class="block hover:text-green-700">Contact</a>
   <a href="expert.html" class="block hover:text-green-700">Ask</a>
 
-</div>
+</div>  
+
 <section class="bg-green-50 py-16 px-6">
-  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
-    <!-- Contact Info -->
-    <div>
-      <h2 class="text-3xl font-bold text-green-800 mb-4">Contact Our Experts</h2>
-      <p class="text-gray-600 mb-6">
-        Have questions about farm inputs, fertilizers, or cost optimization? 
-        Send us a message and our agricultural experts will respond.
-      </p>
+<div class="max-w-6xl mx-auto">
 
-      <div class="space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="text-green-700 text-xl"> <img src="https://www.freeiconspng.com/uploads/green-location-icons-17.png" alt="location" class="h-10 w-10"></span>
-          <p>Nairobi, Kenya</p>
-        </div>
+<h2 class="text-3xl md:text-4xl font-bold text-center text-green-700 mb-10">
+Farm Input Cost Optimizer
+</h2>
 
-        <div class="flex items-center gap-3">
-          <span class="text-green-700 text-xl"><img src="https://thumbs.dreamstime.com/b/phone-ringing-icon-glassy-green-round-button-isolated-abstract-illustration-97494958.jpg" alt="Phone" class="h-10 w-10"></span>
-          <p>+254 700 123 456</p>
-        </div>
+<div class="grid md:grid-cols-2 gap-10">
 
-       
-      </div>
-    </div>
+<!-- INPUT SECTION -->
+
+<div class="bg-white p-6 rounded-xl shadow-lg space-y-4">
+
+<h3 class="text-xl font-semibold text-green-700 mb-4">
+Enter Farm Costs
+</h3>
+
+<input id="seeds" type="number" placeholder="Seed Cost"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<input id="fertilizer" type="number" placeholder="Fertilizer Cost"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<input id="labor" type="number" placeholder="Labor Cost"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<input id="water" type="number" placeholder="Water Cost"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<input id="yield" type="number" placeholder="Expected Yield (kg)"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<input id="price" type="number" placeholder="Expected Market Price per Kg"
+class="w-full border p-3 rounded-lg focus:ring-2 focus:ring-green-500">
+
+<button onclick="calculateFarm()"
+class="w-full bg-green-700 text-white py-3 rounded-lg hover:bg-green-600 transition">
+Calculate
+</button>
+
+</div>
 
 
+<!-- RESULT SECTION -->
 
-    <div class="bg-white p-8 rounded-xl shadow-lg">
-      <form id="contactForm" class="space-y-5">
+<div class="bg-white p-6 rounded-xl shadow-lg">
 
-        <div>
-          <label class="block text-sm font-semibold mb-1">Full Name</label>
-          <input type="text" id="name"
-          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
-          placeholder="Enter your name">
-        </div>
+<h3 class="text-xl font-semibold text-green-700 mb-6">
+Financial Results
+</h3>
 
-        <div>
-          <label class="block text-sm font-semibold mb-1">Email</label>
-          <input type="email" id="email"
-          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
-          placeholder="Enter your email">
-        </div>
+<div class="space-y-3 text-lg">
 
-        <div>
-          <label class="block text-sm font-semibold mb-1">Message</label>
-          <textarea id="message"
-          class="w-full border rounded-lg p-3 focus:ring-2 focus:ring-green-500 outline-none"
-          rows="4"
-          placeholder="Write your message"></textarea>
-        </div>
+<p>Total Production Cost: 
+<span id="totalCost" class="font-bold text-green-700">0</span>
+</p>
 
-        <button
-        type="submit"
-        class="w-full bg-green-700 text-white py-3 rounded-lg font-semibold hover:bg-green-600 transition duration-300">
-        Send Message
-        </button>
+<p>Cost per Kg: 
+<span id="costPerKg" class="font-bold text-green-700">0</span>
+</p>
 
-        <p id="formMessage" class="text-center font-semibold hidden"></p>
+<p>Break-even Price: 
+<span id="breakEven" class="font-bold text-green-700">0</span>
+</p>
 
-      </form>
-    </div>
+<p>Expected Revenue: 
+<span id="revenue" class="font-bold text-green-700">0</span>
+</p>
 
-  </div>
+<p>Expected Profit / Loss: 
+<span id="profit" class="font-bold text-green-700">0</span>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
 
-  <footer class="bg-green-100 p-4">
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-green-100 p-4">
   
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
 
-
+    <!-- Brand -->
     <div>
       <h2 class="text-3xl font-bold  text-green-700 ">
         Farm Optimizer
@@ -126,7 +157,7 @@
       </p>
     </div>
 
-    <div>
+     <div>
       <h3 class="text-green-700 font-semibold mb-4">Quick Links</h3>
       <ul class="space-y-2 text-sm">
         <li><a href="index.html" class="hover:text-lime-300 transition">Home</a></li>
@@ -137,17 +168,17 @@
       </ul>
     </div>
 
-
+    <!-- Resources -->
     <div>
-      <h3 class="text-green-700 font-semibold mb-4">Quick Links</h3>
+      <h3 class="text-green-700 font-semibold mb-4">Resources</h3>
       <ul class="space-y-2 text-sm">
-        <li><a href="index.html" class="hover:text-lime-300 transition">Home</a></li>
-        <li><a href="news.html" class="hover:text-lime-300 transition">News and Updates</a></li>
-        <li><a href="about.html" class="hover:text-lime-300 transition">About Us</a></li>
-        <li><a href="contact.html" class="hover:text-lime-300 transition">Contact Us</a></li>
-        <li><a href="expert.html" class="hover:text-lime-300 transition">Ask an Expert</a></li>
+        <li><a href="#" class="hover:text-lime-300 transition">Farming Tips</a></li>
+        <li><a href="#" class="hover:text-lime-300 transition">Market Insights</a></li>
+        <li><a href="#" class="hover:text-lime-300 transition">Support</a></li>
+        <li><a href="#" class="hover:text-lime-300 transition">Privacy Policy</a></li>
       </ul>
     </div>
+
     <!-- Contact -->
     <div>
       <h3 class="text-green-700 font-semibold mb-4">Contact</h3>
@@ -172,7 +203,7 @@
   </div>
 
 </footer>
-<script src="js/contact.js"></script>
+<script src="js/tools.js"></script>
     
 </body>
 </html>

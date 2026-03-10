@@ -6,35 +6,35 @@ const articles = [
   {
     title: "New Maize Variety Launched",
     description: "High-yield maize is now available for farmers in Nairobi.",
-    url: "#",
+    url: "https://cropnuts.com/tag/maize/",
     image: "assets/maize.jpg",
     tags: ["maize", "Nairobi", "farming"]
   },
   {
     title: "Fertilizer Discount This Month",
     description: "Get up to 20% off on fertilizers at local agri-shops.",
-    url: "#",
+    url: "https://climate.mit.edu/explainers/fertilizer-and-climate-change",
     image: "assets/fertilizer.jpg",
     tags: ["fertilizer", "discount", "Kenya"]
   },
   {
     title: "Irrigation Tips for Small Farms",
     description: "Learn how to save water and improve crop yield.",
-    url: "#",
+    url: "https://www.irrigation.go.ke/",
     image: "assets/irrigation.jpg",
     tags: ["irrigation", "farming"]
   },
   {
     title: "Pest Control Methods",
     description: "Eco-friendly ways to protect your crops from pests.",
-    url: "#",
+    url: "https://fieldworkhq.com/2025/11/18/5-methods-of-pest-control/",
     image: "assets/pest.jpg",
     tags: ["pests", "crops", "farming"]
   },
   {
     title: "Market Prices Update",
     description: "Check the latest market prices for maize, beans, and vegetables.",
-    url: "#",
+    url: "https://www.fmk.co.ke/",
     image: "assets/market.jpg",
     tags: ["market", "prices", "Kenya"]
   }

@@ -43,10 +43,11 @@ Ask the Experts
 Get advice from agricultural experts to help optimize your farm inputs.
 </p>
 
-<div class="grid md:grid-cols-3 gap-10">
+<!-- Slider Container -->
+<div id="expertSlider" class="flex gap-8 overflow-x-auto scroll-smooth pb-6">
 
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+<!-- Expert 1 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwg1P0wNJO_NceC2QmkXOK-ZEciZ-o_ZueJg&s"
 class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
@@ -66,8 +67,8 @@ Ask Question
 
 </div>
 
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+<!-- Expert 2 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVkpgLhP4Hi-r3hTVT2kug7dwnITC2nK3GzQ&s"
 class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
@@ -87,8 +88,8 @@ Ask Question
 
 </div>
 
-<!-- Expert -->
-<div class="bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+<!-- Expert 3 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTG-3kD6aBb2FRzQGtcTn6dQt3nwEEv17bRVg&s"
 class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
@@ -107,10 +108,97 @@ Ask Question
 </button>
 
 </div>
+<!-- Expert 5 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+
+<img src="https://www.shutterstock.com/image-photo/passport-photo-serious-young-adult-600nw-2317626543.jpg"
+class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
+
+<h3 class="text-xl font-semibold text-green-700">
+Mary Atieno
+</h3>
+
+<p class="text-gray-500 text-sm mb-4">
+pest Specialist
+</p>
+
+<button onclick="openForm('Mary Atieno')"
+class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
+Ask Question
+</button>
+
+</div>
+
+
+<!-- Expert 4 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+
+<img src="https://t4.ftcdn.net/jpg/01/24/84/83/360_F_124848388_cjx0VIF3BdR6yveB7ZguDSlEpM91tbrM.jpg"
+class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
+
+<h3 class="text-xl font-semibold text-green-700">
+Samuel Kiptoo
+</h3>
+
+<p class="text-gray-500 text-sm mb-4">
+Irrigation Expert
+</p>
+
+<button onclick="openForm('Samuel Kiptoo')"
+class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
+Ask Question
+</button>
+
+</div>
+
+<!-- Expert 5 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+
+<img src="https://t3.ftcdn.net/jpg/03/73/52/24/360_F_373522464_UzkM3IvqgqpS0qIy2kpkB5QiV7Bw7NyS.jpg"
+class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
+
+<h3 class="text-xl font-semibold text-green-700">
+Mike Omondi
+</h3>
+
+<p class="text-gray-500 text-sm mb-4">
+Livestock Advisor
+</p>
+
+<button onclick="openForm('Mary Atieno')"
+class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
+Ask Question
+</button>
+
+</div>
+
+
+
+<!-- Expert 5 -->
+<div class="min-w-[250px] bg-white rounded-2xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition">
+
+<img src="https://thumbs.dreamstime.com/b/passport-picture-modern-african-woman-isolated-white-background-cut-out-58520238.jpg"
+class="w-24 h-24 rounded-full mx-auto border-4 border-green-500 mb-4">
+
+<h3 class="text-xl font-semibold text-green-700">
+Mercy Wanjiru
+</h3>
+
+<p class="text-gray-500 text-sm mb-4">
+Weather Analyst
+</p>
+
+<button onclick="openForm('Mary Atieno')"
+class="bg-green-700 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">
+Ask Question
+</button>
+
+</div>
 
 </div>
 </div>
 </section>
+<!-- Question Form Modal -->
 <div id="questionForm"
 class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
 
@@ -123,6 +211,10 @@ Ask <span id="expertName"></span>
 <textarea id="questionInput"
 class="w-full border p-2 rounded mb-4"
 placeholder="Type your question"></textarea>
+
+<p id="successMessage" class="text-green-600 text-sm mb-4 hidden">
+Your question has been sent successfully!
+</p>
 
 <div class="flex justify-between">
 
@@ -137,6 +229,8 @@ Cancel
 </button>
 
 </div>
+</div>
+
 </div>
 
 </div>

@@ -90,33 +90,60 @@ Calculate
 
 <!-- RESULT SECTION -->
 
-<div class="bg-white p-6 rounded-xl shadow-lg">
+<div class="bg-white p-8 rounded-2xl shadow-xl">
 
-<h3 class="text-xl font-semibold text-green-700 mb-6">
+<h3 class="text-2xl font-bold text-green-800 mb-8 text-center">
 Financial Results
 </h3>
 
-<div class="space-y-3 text-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-<p>Total Production Cost: 
-<span id="totalCost" class="font-bold text-green-700">0</span>
-</p>
+<!-- Total Cost -->
+<div class="bg-green-50 p-5 rounded-xl flex items-center justify-between shadow-sm">
+<div>
+<p class="text-gray-600 text-sm">Total Production Cost</p>
+<p id="totalCost" class="text-2xl font-bold text-green-700">0</p>
+</div>
+<span class="text-3xl"></span>
+</div>
 
-<p>Cost per Kg: 
-<span id="costPerKg" class="font-bold text-green-700">0</span>
-</p>
+<!-- Cost per KG -->
+<div class="bg-green-50 p-5 rounded-xl flex items-center justify-between shadow-sm">
+<div>
+<p class="text-gray-600 text-sm">Cost per Kg</p>
+<p id="costPerKg" class="text-2xl font-bold text-green-700">0</p>
+</div>
+<span class="text-3xl"></span>
+</div>
 
-<p>Break-even Price: 
-<span id="breakEven" class="font-bold text-green-700">0</span>
-</p>
+<!-- Break Even -->
+<div class="bg-green-50 p-5 rounded-xl flex items-center justify-between shadow-sm">
+<div>
+<p class="text-gray-600 text-sm">Break-even Price</p>
+<p id="breakEven" class="text-2xl font-bold text-green-700">0</p>
+</div>
+<span class="text-3xl"></span>
+</div>
 
-<p>Expected Revenue: 
-<span id="revenue" class="font-bold text-green-700">0</span>
-</p>
+<!-- Revenue -->
+<div class="bg-green-50 p-5 rounded-xl flex items-center justify-between shadow-sm">
+<div>
+<p class="text-gray-600 text-sm">Expected Revenue</p>
+<p id="revenue" class="text-2xl font-bold text-green-700">0</p>
+</div>
+<span class="text-3xl"></span>
+</div>
 
-<p>Expected Profit / Loss: 
-<span id="profit" class="font-bold text-green-700">0</span>
-</p>
+<!-- Profit -->
+<div class="bg-green-100 p-5 rounded-xl flex items-center justify-between shadow-md md:col-span-2">
+<div>
+<p class="text-gray-700 text-sm">Expected Profit / Loss</p>
+<p id="profit" class="text-3xl font-bold text-green-800">0</p>
+</div>
+<span class="text-4xl"></span>
+</div>
+
+</div>
 
 </div>
 

@@ -1,42 +1,51 @@
-let currentExpert = "";
 
-function openForm(name){
 
-currentExpert = name;
+// AUTO SLIDE EXPERTS
+const slider = document.getElementById("expertSlider");
 
-document.getElementById("expertName").innerText = name;
+let scrollAmount = 0;
+
+setInterval(() => {
+
+if(slider){
+scrollAmount += 1;
+slider.scrollLeft = scrollAmount;
+
+if(scrollAmount >= slider.scrollWidth - slider.clientWidth){
+scrollAmount = 0;
+}
+}
+
+},30);
+
+
+// OPEN FORM
+function openForm(expertName){
+
+document.getElementById("expertName").innerText = expertName;
 
 document.getElementById("questionForm").classList.remove("hidden");
 
 }
 
+
+// CLOSE FORM
 function closeForm(){
 
 document.getElementById("questionForm").classList.add("hidden");
 
 }
 
+
+// SEND QUESTION
 function sendQuestion(){
 
-let question = document.getElementById("questionInput").value;
+const question = document.getElementById("questionInput").value.trim();
 
-if(question === ""){
-alert("Please enter your question");
-return;
-}
+if(question === "") return;
 
-alert("Your question has been sent to " + currentExpert);
+document.getElementById("successMessage").classList.remove("hidden");
 
 document.getElementById("questionInput").value = "";
 
-closeForm();
-
 }
-
-// Mobile menu toggle
-const menuBtn = document.getElementById("menuBtn");
-const mobileMenu = document.getElementById("mobileMenu");
-
-menuBtn.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});

@@ -18,6 +18,35 @@ Many farmers:
 This leads to poor financial decision-making and reduced profitability.
 
 ---
+# Screenshots
+ *  Navbar
+   ![alt text](<assets/Screenshot (22).png>)
+
+
+
+ * footer 
+   ![alt text](<assets/Screenshot (23).png>)
+
+* landing page
+ ![alt text](<assets/Screenshot (24).png>)
+
+ *  news section
+ ![alt text](<assets/Screenshot (25).png>)
+
+ * More news section
+ ![alt text](<assets/Screenshot (32).png>)
+
+ * tools section
+ ![alt text](<assets/Screenshot (27).png>)
+
+ * About section 
+ ![alt text](<assets/Screenshot (29).png>)
+
+ * contact section 
+ ![alt text](<assets/Screenshot (30).png>)
+ * experts section 
+ ![alt text](<assets/Screenshot (31).png>)
+
 
 ##  Solution
 
